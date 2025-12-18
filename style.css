@@ -1,0 +1,175 @@
+/* =========================
+   FUTURISTIC MODERN STYLE
+   ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #eaeaea;
+  min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header h1 {
+  font-size: 34px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: #ffffff;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1abc9c, #00e6ff);
+  left: 50%;
+  bottom: 6px;
+  transition: 0.4s ease;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+nav a:hover::after {
+  width: 70%;
+  left: 15%;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero {
+  background: linear-gradient(135deg, rgba(26, 188, 156, 0.9), rgba(0, 230, 255, 0.7));
+  text-align: center;
+  padding: 90px 20px;
+  color: #0f2027;
+}
+
+.hero h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   CONTENT / CARD
+   ========================= */
+.content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
+  margin: 40px auto;
+  padding: 35px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeUp 0.8s ease;
+}
+
+.content h2 {
+  color: #1abc9c;
+  margin-bottom: 15px;
+}
+
+.content p,
+.content li {
+  color: #e0e0e0;
+  line-height: 1.8;
+}
+
+.content ul,
+.content ol {
+  margin-left: 20px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* =========================
+   ANIMATION
+   ========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .content {
+    padding: 25px;
+  }
+}
